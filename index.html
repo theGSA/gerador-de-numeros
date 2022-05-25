@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Gerador de Numeros</title>
+</head>
+<body onload="GerarNumeros()">
+    <div class="app">
+        <h1 class="title">Gerador De Números</h1>
+        <h3>Numeros entre:</h3>
+        <div class="contianer-input">
+            <input type="number" id="min" min="0" placeholder="de" value="1">
+            <a>e</a>
+            <input type="number" id="max" min="0" placeholder="até" value="60">
+        </div>    
+        <h3>Quantidade de Números:</h2>
+        <input type="number" id="qtd_num"value="6" max="100">
+        <button onclick="GerarNumeros()">GERAR NÚMEROS</button>
+        <div class="sorted-number"></div>
+    </div>
+</body>
+
+</html>
