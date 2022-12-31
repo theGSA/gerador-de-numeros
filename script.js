@@ -29,12 +29,14 @@ function GerarNumeros(){
         while (nGerados.length < qtd_num && i < 100000 && nGerados.length <= max - min){
              var n = getRndInteger(min, max);
             if(!nGerados.includes(n)){
-                console.log(`insere ${n}\n`);
-                strNumerosGerados += "<i>"+String(n).padStart(2,'0')+"</i>";
                 nGerados.push(n);
             }
             i += 1;
         }
+
+        nGerados.sort((a, b)=> a - b)
+                .forEach(a=> strNumerosGerados += "<i>"+String(a).padStart(2,'0')+"</i>");
+
         sorted_number.innerHTML = strNumerosGerados;
         console.log(strNumerosGerados);
     }
